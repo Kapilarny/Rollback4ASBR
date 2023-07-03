@@ -1,6 +1,7 @@
 # Technical Plan
 
 This document serves to note all technical details we will need to know when implementing the Rollback.
+To be clear, this project (atleast for now) ONLY focuses on the Windows PC Steam version of the game, since it's the most popular platform and the easiest to work with.
 
 ## Simplified plan for client <-> server <-> client communication
 
