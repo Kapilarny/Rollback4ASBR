@@ -1,5 +1,7 @@
 # Technical Plan
 
+## What is this file for?
+
 This document serves to note all technical details we will need to know when implementing the Rollback.
 To be clear, this project (atleast for now) ONLY focuses on the Windows PC Steam version of the game, since it's the most popular platform and the easiest to work with.
 
@@ -13,7 +15,7 @@ We will use some mystical modding magic to intercept the game's input, we will s
 
 For now i will stick mainly with the server version, but i will make it possible to also use the P2P version for those who arent scared of leaking their ip somewhere or playing with friends.
 
-![really great drawing](./img/ASBR%20ROLLBACK%20NOTES.png)
+![really great drawing](./img/serverclient.png)
 
 This really great drawing above shows the basics on how the server will work. The red/blue arrow represent the packets that respectively P1 and P2 send. Basically server just receives the packet and sends it back to the opposite player. Nothing too crazy there.
 For P2P connections we could just ignore the servers and send the packets directly to the other player.
@@ -26,3 +28,9 @@ You know how the great mighty delay-based netcode works right? It waits for the 
 ## Technologies
 
 We will use most probably C++ for the client application that will handle sending inputs and rollbacking, for server i have no clue yet but most probably some performant language like Rust or Go.
+
+## Tools used
+
+- [CriPakTools ASBR Ver.](https://www.nexusmods.com/jojosbizarreadventureallstarbattler/mods/2)
+- Ghidra
+- [Steamless](https://github.com/atom0s/Steamless)
